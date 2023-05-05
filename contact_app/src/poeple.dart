@@ -30,8 +30,7 @@ final List<Map<String, Object>> _people = [
     "phone": "+1 (840) 412-2101",
     "address":
         "497 Clifton Place, Brookfield, Federated States Of Micronesia, 4325",
-    "about":
-        "Ut cupidatat sit nisi sit fugiat sunt qui anim aute aliqua incididunt aliqua est duis. Et sit tempor ad qui. Consectetur sint veniam qui fugiat. Laboris pariatur adipisicing cillum cillum reprehenderit veniam dolor. Lorem tempor sint duis excepteur laboris dolor dolor.\r\n",
+    "about": "Ut cupidatat sit nisi sit\r\n",
     "registered": "2018-03-02T03:29:13 +08:00",
     "latitude": -42.501107,
     "longitude": 155.830861,
