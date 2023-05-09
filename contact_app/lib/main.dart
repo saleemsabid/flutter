@@ -5,8 +5,6 @@ void main() {
   runApp(const MyApp());
 }
 
-// final Person person = people[0];
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -62,6 +60,7 @@ class WideLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
+      child: const ContactTile(),
     );
   }
 }
@@ -73,6 +72,7 @@ class MidLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.orange,
+      child: const ContactTile(),
     );
   }
 }
@@ -84,22 +84,24 @@ class NarrowLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.green,
-      child: const ContactTile(index: 4),
+      child: const ContactTile(),
     );
   }
 }
 
 class ContactTile extends StatelessWidget {
-  const ContactTile({super.key, required this.index});
-
-  final int index;
+  const ContactTile({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: const Icon(Icons.account_circle_rounded),
-      title: Text(people[index].name),
-      subtitle: Text(people[index].age),
+    return ListView.builder(
+      itemCount: people.length,
+      itemBuilder: (context, index) => ListTile(
+        leading: const Icon(Icons.account_circle_rounded),
+        onTap: () {},
+        title: Text(people[index].name),
+        subtitle: Text(people[index].phone),
+      ),
     );
   }
 }
